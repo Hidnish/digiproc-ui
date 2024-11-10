@@ -3,6 +3,7 @@
 import { Badge, Box, Button, Card, Grid, Rating, Stack, Text, useMantineTheme } from '@mantine/core';
 import Image from 'next/image';
 import { Product as ProductI } from '../types/product.interface';
+import ModalRating from './modal-ratings';
 interface ProductProps {
 	product: ProductI;
 }
@@ -63,7 +64,9 @@ export default function Product({ product }: ProductProps) {
 						>
 							Ratings
 						</Text>
-						<Rating className="m-auto" value={product.rating} readOnly />
+						<ModalRating productId={product.id}>
+							<Rating className="m-auto" value={product.rating} readOnly />
+						</ModalRating>
 					</Stack>
 
 					<Button fullWidth h={50} mt="xl" radius="md" color={product.color}>
