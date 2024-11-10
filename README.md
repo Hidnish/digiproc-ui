@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DigiProc - Next.js E-commerce App with Mantine
+
+This is a Next.js application built with the [Mantine](https://mantine.dev/) component library. The app enables users to browse products, view product details, register, log in, and add ratings to products.
+
+![Product Page](./public/product-page.png)
+
+## Features
+
+- **Product Page**: View details of each product.
+- **User Registration and Login**: Authentication for accessing personalized features.
+- **Add Ratings**: Users can add ratings to products.
+- **Responsive Design**: Built with Mantine for a consistent look and feel across devices.
+- **Cart**: !! Feature not yet available !!
+
+## Tech Stack
+
+- **Frontend**: Next.js
+- **Component Library**: Mantine
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Ensure you have the following installed:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [Node.js](https://nodejs.org/) (v20.18 or higher)
+- [Yarn](https://yarnpkg.com/) or [npm](https://www.npmjs.com/)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. **Clone the repository**:
+   ```bash
+   git clone https://github.com/Hidnish/digiproc-ui.git
+   cd <your-forked-repo>
 
-## Learn More
+3. **Install dependencies**:
+	```bash
+   npm install
+	 #or
+   yarn install
+	 ```
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Environment Variables
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Create a `.env.local` file in the project root and add the following:
 
-## Deploy on Vercel
+```dotenv
+# Port for the server (change 3001 with you server PORT)
+API_URL=http://localhost:3001
+````
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Install dependencies**:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+ ```bash
+npm install
+#or
+yarn install
+ ```
