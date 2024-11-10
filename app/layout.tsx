@@ -5,6 +5,8 @@ import { Container, MantineProvider } from '@mantine/core';
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { AuthContext } from './auth/auth-context';
+import authenticated from './auth/authenticated.action';
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -22,21 +24,25 @@ export const metadata: Metadata = {
   description: "DigiProc products app",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+	const isAuth = await authenticated();
+
   return (
     <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <MantineProvider>
-          <Container>
-            {children}
-          </Container>
-        </MantineProvider>
+				<AuthContext.Provider value={isAuth}>
+					<MantineProvider>
+						<Container>
+							{children}
+						</Container>
+					</MantineProvider>
+				</AuthContext.Provider>
       </body>
     </html>
   );
