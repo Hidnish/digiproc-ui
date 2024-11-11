@@ -50,10 +50,10 @@ Create a `.env.local` file in the project root and add the following:
 API_URL=http://localhost:3001
 ````
 
-**Install dependencies**:
+## Running The Server
 
  ```bash
-npm install
+npm run dev
 #or
-yarn install
+yarn dev
  ```
